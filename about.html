@@ -373,6 +373,23 @@
     box-shadow: 0 10px 24px rgba(249, 115, 22, 0.35);
   }
 
+  .btn-secondary {
+    background: transparent;
+    color: var(--charcoal);
+    border: 2px solid rgba(43, 43, 38, 0.18);
+    padding: 13px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-block;
+    transition: transform 0.15s, border-color 0.15s;
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    border-color: var(--orange);
+  }
+
   @media (max-width: 720px) {
     .cta-band { padding: 40px 28px; }
   }
@@ -479,6 +496,7 @@
       <h2>See what SmartScape can do for your yard.</h2>
       <p>You can get a personalized native plant Greenprint in minutes.</p>
       <a href="https://greenprint-demo.netlify.app" target="_blank" class="btn-primary">Try the Free Demo</a>
+      <a href="https://smartscape.gumroad.com/l/greenprint" target="_blank" class="btn-secondary" style="margin-left:14px;">Buy Now — $9.99</a>
     </div>
   </div>
 </div>
