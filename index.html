@@ -339,7 +339,7 @@
   /* PRODUCTS */
   .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
   }
 
@@ -503,7 +503,11 @@
     .contact-inner { grid-template-columns: 1fr; }
   }
 
-  @media (max-width: 820px) {
+  @media (max-width: 1050px) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 560px) {
     .product-grid { grid-template-columns: 1fr; }
   }
 
@@ -540,7 +544,7 @@
     <div class="hero-content">
       <span class="eyebrow">🌱 Native plant landscaping, made easy</span>
       <h1>Turn any yard into a <em>native</em> habitat.</h1>
-      <p>SmartScape uses AI to design personalized native plant landscapes — matched to your exact site, climate, and soil. Every layer, from ground cover to flowers, shrubs, and trees.</p>
+      <p>SmartScape is a hub for native plant landscaping, and its Greenprint Generator designs personalized native plant landscapes — matched to your exact site, climate, and soil. Every layer, from ground cover to flowers, shrubs, and trees.</p>
       <div class="hero-actions">
         <a href="https://greenprint-demo.netlify.app" target="_blank" class="btn-primary">Try the Free Demo</a>
         <a href="about.html" class="btn-secondary">Meet the founder</a>
@@ -562,8 +566,9 @@
       <div class="about-text">
         <span class="section-eyebrow">Why SmartScape</span>
         <h2 style="font-family:'Fraunces',serif; font-size:clamp(1.9rem,3.5vw,2.6rem); margin-bottom:20px;">Built for the yards nobody's designing.</h2>
+        <p style="font-weight:600; margin-bottom:16px;">Every conventional yard is a climate retrofit waiting to happen — SmartScape shows you how.</p>
         <p>Between <strong>collapsing insect and bird populations</strong>, high-water suburban lawns, and the fire risk that comes with flammable non-native landscaping, our yards matter more than most people realize.</p>
-        <p>Most homeowners will never hire a landscape designer — budget, scale, or simply not knowing it's an option. SmartScape exists for them: an AI-powered tool that turns "I don't know where to start" into a personalized, native plant list, planting layout, and nursery match — in minutes, not months.</p>
+        <p>Most homeowners will never hire a landscape designer — because of budget, scale, or simply not knowing it's an option. SmartScape exists for them: a hybrid of human expertise paired with AI power that turns "I don't know where to start" into a personalized, native plant list, planting layout, and local nursery matches — in minutes, not months.</p>
         <p><strong>Powered by Claude AI, directed by SmartScape's human expertise.</strong></p>
       </div>
       <div class="about-stats">
@@ -589,7 +594,7 @@
     <div class="section-head">
       <span class="section-eyebrow">The Platform</span>
       <h2>One founder, a growing toolkit.</h2>
-      <p>Greenprint Generator is live today. PlantScan and PlantConnect are next.</p>
+      <p>Greenprint Generator is live today. PlantScan, PlantRx, and PlantConnect are next.</p>
     </div>
     <div class="product-grid">
       <div class="product-card live">
@@ -601,13 +606,19 @@
       <div class="product-card">
         <span class="product-badge badge-soon">Coming soon</span>
         <h3>PlantScan</h3>
-        <p>Point your camera at any plant to instantly identify whether it's native, and what it means for your yard.</p>
+        <p>Point your camera at any plant to instantly identify whether it's native, whether it's highly flammable, and what it means for your yard.</p>
+        <span class="product-link disabled">In development</span>
+      </div>
+      <div class="product-card">
+        <span class="product-badge badge-soon">Coming soon</span>
+        <h3>PlantRx</h3>
+        <p>Point your camera at any native plant that's not thriving, and receive an AI diagnosis and recommended remedy.</p>
         <span class="product-link disabled">In development</span>
       </div>
       <div class="product-card">
         <span class="product-badge badge-purple">Coming soon</span>
         <h3>PlantConnect</h3>
-        <p>A free community forum to swap advice, cuttings, and encouragement with other native-plant converts near you.</p>
+        <p>A free community forum to swap advice, cuttings, and encouragement, and ask questions with other native-plant converts near you.</p>
         <span class="product-link disabled">In development</span>
       </div>
     </div>
@@ -621,7 +632,7 @@
         <div>
           <span class="section-eyebrow">Get in touch</span>
           <h2>Questions, feedback, or ideas?</h2>
-          <p>Whether you're a nursery owner, a fellow builder, or just curious about your yard — I'd love to hear from you.</p>
+          <p>Whether you're a nursery owner, a fellow plant lover, or just curious about your yard — I'd love to hear from you.</p>
         </div>
         <form action="mailto:hello@smartscape.co" method="POST" enctype="text/plain">
           <input type="text" name="name" placeholder="Your name" required>
