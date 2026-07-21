@@ -106,8 +106,64 @@
     box-shadow: 0 8px 20px rgba(249, 115, 22, 0.35);
   }
 
+  .nav-toggle { display: none; }
+  .nav-burger { display: none; }
+
   @media (max-width: 720px) {
     .nav-links { display: none; }
+
+    .nav-burger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-right: 8px;
+    }
+
+    .nav-burger span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: var(--green);
+      border-radius: 2px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .nav-toggle:checked ~ .nav-burger span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease;
+      background: var(--cream);
+      border-bottom: 1px solid rgba(30, 75, 61, 0.12);
+    }
+
+    .nav-toggle:checked ~ .mobile-nav-links {
+      max-height: 300px;
+    }
+
+    .mobile-nav-links a {
+      padding: 16px 32px;
+      font-weight: 500;
+      border-top: 1px solid rgba(30, 75, 61, 0.08);
+    }
   }
 
   /* HERO */
@@ -239,7 +295,7 @@
 
   /* STORY SECTION */
   .story-section {
-    padding: 20px 0 90px;
+    padding: 20px 0 48px;
   }
 
   .story-grid {
@@ -332,7 +388,7 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-bottom: 90px;
+    margin-bottom: 40px;
   }
 
   .cta-band::before {
@@ -421,7 +477,14 @@
       <a href="index.html#products">Products</a>
       <a href="index.html#contact">Contact</a>
     </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
     <a href="https://greenprint-demo.netlify.app" target="_blank" class="nav-cta">Try the Demo</a>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html#about">About SmartScape</a>
+    <a href="index.html#products">Products</a>
+    <a href="index.html#contact">Contact</a>
   </div>
 </nav>
 
