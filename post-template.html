@@ -843,6 +843,31 @@
     width: 100%;
     border-radius: 16px;
     margin: 8px 0 24px;
+    display: block;
+  }
+
+  .post-figure {
+    margin: 0 0 32px;
+  }
+
+  .post-figure img {
+    margin-bottom: 10px;
+  }
+
+  .post-figure figcaption {
+    font-size: 0.85rem;
+    color: var(--charcoal-soft);
+    line-height: 1.5;
+  }
+
+  .post-figure figcaption a {
+    color: var(--charcoal-soft);
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  .post-figure figcaption a:hover {
+    color: var(--teal);
   }
 
   .post-body a {
@@ -897,7 +922,21 @@
       <div class="post-body">
 
         <!-- Write your post below. Delete this paragraph and replace it with your own.
-             Use <p>...</p> for each paragraph, and <h2>...</h2> for a subheading if you want one. -->
+             Use <p>...</p> for each paragraph, and <h2>...</h2> for a subheading if you want one.
+
+             TO ADD AN IMAGE (recommended for every post — visuals help a lot):
+             Use a <figure> block like this one, then delete it if you don't want an image:
+
+             <figure class="post-figure">
+               <img src="[IMAGE URL]" alt="[Describe what's in the image, for accessibility and SEO]" loading="lazy">
+               <figcaption>[Caption text]. Photo by <a href="[PHOTOGRAPHER PROFILE URL]">[Photographer Name]</a> on <a href="[SOURCE URL]">[Source, e.g. Unsplash]</a>.</figcaption>
+             </figure>
+
+             IMPORTANT — only use images you have the rights to:
+             - Your own photos: always fine.
+             - Stock sites like Unsplash/Pexels: fine, but always credit the photographer as shown above.
+             - Photos from news articles, other people's websites, or Google Images: NOT fine — these
+               are copyrighted and can't be reused without a license, even with credit given. -->
         <p>[Write your post here. Replace this paragraph with your own text. Add as many
         &lt;p&gt;...&lt;/p&gt; paragraphs as you need — just copy this line's structure for each new one.]</p>
 
