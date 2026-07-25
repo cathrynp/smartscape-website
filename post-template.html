@@ -49,9 +49,9 @@
   "url": "https://smartscape.co/[POST-URL-SLUG]",
   "datePublished": "[YYYY-MM-DD]",
   "author": {
-    "@type": "Organization",
-    "name": "SmartScape",
-    "url": "https://smartscape.co/"
+    "@type": "Person",
+    "name": "[AUTHOR NAME]",
+    "jobTitle": "[AUTHOR TITLE, e.g. Founder]"
   },
   "publisher": {
     "@type": "Organization",
@@ -812,6 +812,14 @@
     display: block;
   }
 
+  .post-article-header .post-byline {
+    color: var(--charcoal-soft);
+    font-size: 0.92rem;
+    font-weight: 500;
+    margin-bottom: 14px;
+    display: block;
+  }
+
   .post-article-header h1 {
     font-size: clamp(2rem, 4.5vw, 2.7rem);
     letter-spacing: -0.01em;
@@ -835,6 +843,17 @@
     width: 100%;
     border-radius: 16px;
     margin: 8px 0 24px;
+  }
+
+  .post-body a {
+    color: var(--teal);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 600;
+  }
+
+  .post-body a:hover {
+    color: var(--orange);
   }
 </style>
 </head>
@@ -872,6 +891,7 @@
       <div class="post-article-header">
         <span class="post-date">[Month Day, Year]</span>
         <h1>[POST TITLE]</h1>
+        <span class="post-byline">By [AUTHOR NAME], [AUTHOR TITLE]</span>
       </div>
 
       <div class="post-body">
