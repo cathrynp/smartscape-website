@@ -807,7 +807,7 @@
       <div class="product-card">
         <span class="product-badge badge-purple">Coming soon</span>
         <h3>PlantConnect</h3>
-        <p>A free community forum to swap advice, cuttings, and encouragement, and ask questions with other native-plant converts near you.</p>
+        <p>A free community forum to swap advice, cuttings, and encouragement, and ask questions with other native-plant converts near you — and eventually gather in person in your community.</p>
         <span class="product-link disabled">In development</span>
       </div>
     </div>
@@ -837,5 +837,25 @@
   </div>
 </footer>
 
+<script>
+  (function() {
+    var navLinks = document.querySelectorAll('.nav-links a[href="#products"], .nav-links a[href="#contact"]');
+    var sections = [document.getElementById('products'), document.getElementById('contact')].filter(Boolean);
+    if (!navLinks.length || !sections.length) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        var link = document.querySelector('.nav-links a[href="#' + entry.target.id + '"]');
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach(function(l) { l.classList.remove('active'); });
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+
+    sections.forEach(function(s) { observer.observe(s); });
+  })();
+</script>
 </body>
 </html>
