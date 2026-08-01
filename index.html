@@ -485,22 +485,31 @@
     border-radius: 16px;
     padding: 22px;
     border: 1px solid rgba(43, 43, 38, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 14px;
   }
 
   .native-card .icon {
-    width: 26px;
-    height: 26px;
-    margin-bottom: 12px;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .native-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .native-card h3 {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: var(--charcoal);
     margin-bottom: 4px;
   }
 
   .native-card p {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--charcoal-soft);
     margin: 0;
   }
@@ -797,33 +806,45 @@
     <div class="native-grid">
       <div class="native-card">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#3AADA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c4 5 7 8.5 7 12a7 7 0 0 1-14 0c0-3.5 3-7 7-12z"/></svg>
+        <div class="native-text">
         <h3>Little to no watering</h3>
         <p>Once established</p>
+        </div>
       </div>
       <div class="native-card">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#5C9A3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c8-1 13-6 14-14-8 1-13 6-14 14z"/><path d="M5 21c0-4 2-8 5-11"/></svg>
+        <div class="native-text">
         <h3>No fertilizer or pesticides</h3>
         <p>Nature does the work</p>
+        </div>
       </div>
       <div class="native-card">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <div class="native-text">
         <h3>Food and habitat</h3>
         <p>For bees, insects, birds, pollinators</p>
+        </div>
       </div>
       <div class="native-card">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#5B3A73" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <div class="native-text">
         <h3>Low maintenance</h3>
         <p>No mowing, minimal upkeep</p>
+        </div>
       </div>
       <div class="native-card">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#F2C94C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-11 4 7 3-5 5 9z"/></svg>
+        <div class="native-text">
         <h3>Enriches and protects soil</h3>
         <p>Deep roots and partner fungi unlock nutrients</p>
+        </div>
       </div>
       <div class="native-card">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#D85A30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-1.5 4-5 4-5 9a5 5 0 0 0 10 0c0-2-1-3-1-5-1 1-1.5 2-1.5 2C14.5 6 13.5 4 12 2z"/></svg>
+        <div class="native-text">
         <h3>Lower wildfire risk</h3>
         <p>Than flammable non-natives</p>
+        </div>
       </div>
     </div>
   </div>
