@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Native Plant Societies Directory — SmartScape</title>
+<title>Native Plant Groups — SmartScape</title>
 <meta name="description" content="A state-by-state directory of native plant societies across the US, plus national organizations working to protect and promote native plants.">
 <link rel="canonical" href="https://smartscape.co/native-plant-societies.html">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SmartScape">
 <meta property="og:url" content="https://smartscape.co/native-plant-societies.html">
-<meta property="og:title" content="Native Plant Societies Directory — SmartScape">
+<meta property="og:title" content="Native Plant Groups — SmartScape">
 <meta property="og:description" content="A state-by-state directory of native plant societies across the US, plus national organizations working to protect and promote native plants.">
 <meta property="og:image" content="https://smartscape.co/social-preview.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en_US">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Native Plant Societies Directory — SmartScape">
+<meta name="twitter:title" content="Native Plant Groups — SmartScape">
 <meta name="twitter:description" content="A state-by-state directory of native plant societies across the US, plus national organizations working to protect and promote native plants.">
 <meta name="twitter:image" content="https://smartscape.co/social-preview.png">
 
@@ -26,7 +26,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Native Plant Societies Directory",
+  "name": "Native Plant Groups",
   "url": "https://smartscape.co/native-plant-societies.html",
   "description": "A state-by-state directory of native plant societies across the US, plus national organizations working to protect and promote native plants.",
   "isPartOf": {
@@ -376,9 +376,6 @@
     font-weight: 700;
     color: var(--green);
   }
-</style>
-</head>
-<body>
 
   /* DIRECTORY PAGE */
   .dir-hero {
@@ -403,19 +400,32 @@
   }
 
   /* JUMP NAV */
+  /* Explicitly static: the site's base "nav { position: sticky; top: 0; }" rule
+     (for the header nav) also matches this <nav> element by tag. With 51 states
+     this jump nav wraps to several lines, so if it inherited sticky it would
+     permanently cover the cards scrolling underneath it. */
   .jump-nav {
-    position: sticky;
-    top: 130px;
-    z-index: 90;
+    position: static;
     background: var(--cream);
     border-top: 1px solid rgba(43, 43, 38, 0.1);
     border-bottom: 1px solid rgba(43, 43, 38, 0.1);
     padding: 14px 0;
   }
 
+  /* The site's base "nav .wrap { height: 130px; display: flex; align-items:
+     center; justify-content: space-between; }" rule (for the header nav) is
+     more specific than a bare .jump-nav-inner class rule and also matches this
+     div (it has class="wrap jump-nav-inner"). That forced a fixed 130px height
+     the wrapped 51-state list blew past, so the section below started too soon
+     and overlapped the overflowing rows above it. ".jump-nav .wrap" below has
+     higher specificity than "nav .wrap" and wins instead. */
+  .jump-nav .wrap,
   .jump-nav-inner {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
     gap: 6px 4px;
   }
 
@@ -457,59 +467,74 @@
 
   /* STATE LIST */
   .state-list {
-    max-width: 820px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
   }
 
   .state-entry {
-    padding: 22px 0;
-    border-bottom: 1px solid rgba(43, 43, 38, 0.08);
-    scroll-margin-top: 190px;
-  }
-
-  .state-entry:last-child {
-    border-bottom: none;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 22px 24px;
+    box-shadow: 0 6px 20px rgba(30, 75, 61, 0.07);
+    scroll-margin-top: 150px;
   }
 
   .state-entry h3 {
     font-family: 'Fraunces', serif;
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--green);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(43, 43, 38, 0.08);
   }
 
   .org-primary {
     display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 4px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 
   .org-name {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--charcoal);
+    font-size: 1rem;
   }
 
   .org-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(58, 173, 160, 0.1);
     color: var(--teal);
     font-weight: 600;
-    border-bottom: 1px solid rgba(58, 173, 160, 0.4);
+    font-size: 0.9rem;
+    padding: 5px 12px;
+    border-radius: 14px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .org-link:hover {
+    background: rgba(249, 115, 22, 0.12);
     color: var(--orange);
-    border-color: var(--orange);
   }
 
   .org-notes {
     list-style: none;
-    margin-top: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
     padding-left: 0;
+    border-top: 1px solid rgba(43, 43, 38, 0.08);
   }
 
   .org-notes li {
     color: var(--charcoal-soft);
-    font-size: 0.96rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
     padding-left: 16px;
     position: relative;
   }
@@ -551,7 +576,7 @@
 
 <section class="dir-hero">
   <div class="wrap">
-    <h1>Native Plant Societies Directory</h1>
+    <h1>Native Plant Groups</h1>
     <p class="lede">Every US state has people already doing this work &mdash; native plant societies that host plant sales, lead walks, and know your region's plants better than anyone. Find yours below.</p>
   </div>
 </section>
