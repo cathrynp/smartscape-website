@@ -490,11 +490,21 @@
     border-bottom: 1px solid rgba(43, 43, 38, 0.08);
   }
 
-  .org-primary {
+  .org-block {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+  }
+
+  /* A second (or third) org-block in the same state card — e.g. Wild Ones listed
+     as an equal-billing entry alongside the primary native plant society — gets
+     its own divider so it reads as a distinct, equally-weighted organization
+     rather than a note under the first one. */
+  .org-block + .org-block {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(43, 43, 38, 0.08);
   }
 
   .org-name {
@@ -577,7 +587,7 @@
 <section class="dir-hero">
   <div class="wrap">
     <h1>Native Plant Groups</h1>
-    <p class="lede">Every US state has people already doing this work &mdash; native plant societies that host plant sales, lead walks, and know your region's plants better than anyone. Find yours below.</p>
+    <p class="lede">There are native plant and native landscaping enthusiasts, experts and communities in every US state. Native plant societies host plant sales, lead walks, and know your region's plants better than anyone. Wild Ones focuses more on the landscaping side &mdash; local chapters help people redesign lawns and yards into native habitat, with hands-on workshops, garden tours, and a community built around doing the planting and landscaping work itself. Find your local groups below.</p>
   </div>
 </section>
 
@@ -668,15 +678,19 @@
 
     <div class="state-entry" id="alabama">
       <h3>Alabama</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Alabama Wildflower Society</span>
         <a href="https://alabamawildflower.org" target="_blank" rel="noopener" class="org-link">alabamawildflower.org</a>
-      </div><ul class="org-notes"><li>WildOnes AL chapters also active (wildones.org/chapters/alabama)</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/alabama/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/alabama</a>
+      </div>
     </div>
 
     <div class="state-entry" id="alaska">
       <h3>Alaska</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Alaska Native Plant Society</span>
         <a href="https://aknps.org" target="_blank" rel="noopener" class="org-link">aknps.org</a>
       </div>
@@ -684,47 +698,67 @@
 
     <div class="state-entry" id="arizona">
       <h3>Arizona</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Arizona Native Plant Society</span>
         <a href="https://aznps.com" target="_blank" rel="noopener" class="org-link">aznps.com</a>
-      </div><ul class="org-notes"><li>WildOnes Northwest Arizona chapter also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/arizona/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/arizona</a>
+      </div>
     </div>
 
     <div class="state-entry" id="arkansas">
       <h3>Arkansas</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Arkansas Native Plant Society</span>
         <a href="https://anps.org" target="_blank" rel="noopener" class="org-link">anps.org</a>
-      </div><ul class="org-notes"><li>WildOnes AR chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/arkansas/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/arkansas</a>
+      </div>
     </div>
 
     <div class="state-entry" id="california">
       <h3>California</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">California Native Plant Society</span>
         <a href="https://www.cnps.org" target="_blank" rel="noopener" class="org-link">cnps.org</a>
-      </div><ul class="org-notes"><li>Many regional chapters (East Bay, Sacramento Valley, San Diego, Santa Cruz, Santa Clara, SLO); WildOnes CA chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/california/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/california</a>
+      </div><ul class="org-notes"><li>Many CNPS regional chapters (East Bay, Sacramento Valley, San Diego, Santa Cruz, Santa Clara, SLO)</li></ul>
     </div>
 
     <div class="state-entry" id="colorado">
       <h3>Colorado</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Colorado Native Plant Society</span>
         <a href="https://conps.org" target="_blank" rel="noopener" class="org-link">conps.org</a>
-      </div><ul class="org-notes"><li>WildOnes CO chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/colorado/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/colorado</a>
+      </div>
     </div>
 
     <div class="state-entry" id="connecticut">
       <h3>Connecticut</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Connecticut Botanical Society</span>
         <a href="https://ct-botanical-society.org" target="_blank" rel="noopener" class="org-link">ct-botanical-society.org</a>
-      </div><ul class="org-notes"><li>WildOnes CT chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/connecticut/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/connecticut</a>
+      </div>
     </div>
 
     <div class="state-entry" id="delaware">
       <h3>Delaware</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Delaware Native Plant Society</span>
         <a href="https://delawarenativeplants.org" target="_blank" rel="noopener" class="org-link">delawarenativeplants.org</a>
       </div>
@@ -732,7 +766,7 @@
 
     <div class="state-entry" id="district-of-columbia">
       <h3>District of Columbia</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Botanical Society of Washington</span>
         <a href="https://botsoc.org" target="_blank" rel="noopener" class="org-link">botsoc.org</a>
       </div>
@@ -740,23 +774,31 @@
 
     <div class="state-entry" id="florida">
       <h3>Florida</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Florida Native Plant Society</span>
         <a href="https://www.fnps.org" target="_blank" rel="noopener" class="org-link">fnps.org</a>
-      </div><ul class="org-notes"><li>Multiple regional chapters; WildOnes FL chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/florida/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/florida</a>
+      </div><ul class="org-notes"><li>Multiple FNPS regional chapters statewide</li></ul>
     </div>
 
     <div class="state-entry" id="georgia">
       <h3>Georgia</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Georgia Native Plant Society</span>
         <a href="https://gnps.org" target="_blank" rel="noopener" class="org-link">gnps.org</a>
-      </div><ul class="org-notes"><li>WildOnes GA chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/georgia/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/georgia</a>
+      </div>
     </div>
 
     <div class="state-entry" id="hawaii">
       <h3>Hawaii</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Native Hawaiian Plant Society</span>
         <a href="https://hear.org/nhps" target="_blank" rel="noopener" class="org-link">hear.org/nhps</a>
       </div>
@@ -764,39 +806,55 @@
 
     <div class="state-entry" id="idaho">
       <h3>Idaho</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Idaho Native Plant Society</span>
         <a href="https://idahonativeplants.org" target="_blank" rel="noopener" class="org-link">idahonativeplants.org</a>
-      </div><ul class="org-notes"><li>WildOnes ID chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/idaho/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/idaho</a>
+      </div>
     </div>
 
     <div class="state-entry" id="illinois">
       <h3>Illinois</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Illinois Native Plant Society</span>
         <a href="https://illinoisplants.org" target="_blank" rel="noopener" class="org-link">illinoisplants.org</a>
-      </div><ul class="org-notes"><li>WildOnes IL chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/illinois/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/illinois</a>
+      </div>
     </div>
 
     <div class="state-entry" id="indiana">
       <h3>Indiana</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Indiana Native Plant Society</span>
         <a href="https://indiananativeplants.org" target="_blank" rel="noopener" class="org-link">indiananativeplants.org</a>
-      </div><ul class="org-notes"><li>WildOnes IN chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/indiana/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/indiana</a>
+      </div>
     </div>
 
     <div class="state-entry" id="iowa">
       <h3>Iowa</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Iowa Native Plant Society</span>
         <a href="https://iowanativeplants.org" target="_blank" rel="noopener" class="org-link">iowanativeplants.org</a>
-      </div><ul class="org-notes"><li>WildOnes IA chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/iowa/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/iowa</a>
+      </div>
     </div>
 
     <div class="state-entry" id="kansas">
       <h3>Kansas</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Kansas Native Plant Society</span>
         <a href="https://kansasnativeplantsociety.org" target="_blank" rel="noopener" class="org-link">kansasnativeplantsociety.org</a>
       </div>
@@ -804,79 +862,115 @@
 
     <div class="state-entry" id="kentucky">
       <h3>Kentucky</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Kentucky Native Plant Society</span>
         <a href="https://knps.org" target="_blank" rel="noopener" class="org-link">knps.org</a>
-      </div><ul class="org-notes"><li>WildOnes KY chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/kentucky/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/kentucky</a>
+      </div>
     </div>
 
     <div class="state-entry" id="louisiana">
       <h3>Louisiana</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Louisiana Native Plant Society</span>
         <a href="https://lnps.org" target="_blank" rel="noopener" class="org-link">lnps.org</a>
-      </div><ul class="org-notes"><li>WildOnes LA chapters also active; regional: Native Plant Initiative of Greater New Orleans (npi-gno.org)</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/louisiana/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/louisiana</a>
+      </div><ul class="org-notes"><li>Regional: Native Plant Initiative of Greater New Orleans (npi-gno.org)</li></ul>
     </div>
 
     <div class="state-entry" id="maine">
       <h3>Maine</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Native Plant Trust</span>
         <a href="https://www.nativeplanttrust.org" target="_blank" rel="noopener" class="org-link">nativeplanttrust.org</a>
-      </div><ul class="org-notes"><li>Maine is served by this Massachusetts-based regional org; WildOnes ME chapter also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/maine/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/maine</a>
+      </div><ul class="org-notes"><li>Maine is served by this Massachusetts-based regional org</li></ul>
     </div>
 
     <div class="state-entry" id="maryland">
       <h3>Maryland</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Maryland Native Plant Society</span>
         <a href="https://www.mdflora.org" target="_blank" rel="noopener" class="org-link">mdflora.org</a>
-      </div><ul class="org-notes"><li>WildOnes MD chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/maryland/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/maryland</a>
+      </div>
     </div>
 
     <div class="state-entry" id="massachusetts">
       <h3>Massachusetts</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Grow Native Massachusetts</span>
         <a href="https://grownativemass.org" target="_blank" rel="noopener" class="org-link">grownativemass.org</a>
-      </div><ul class="org-notes"><li>Also see Native Plant Trust (nativeplanttrust.org); WildOnes MA chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/massachusetts/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/massachusetts</a>
+      </div><ul class="org-notes"><li>Also see Native Plant Trust (nativeplanttrust.org)</li></ul>
     </div>
 
     <div class="state-entry" id="michigan">
       <h3>Michigan</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Wildflower Association of Michigan</span>
         <a href="https://wildflowersmich.org" target="_blank" rel="noopener" class="org-link">wildflowersmich.org</a>
-      </div><ul class="org-notes"><li>WildOnes MI chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/michigan/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/michigan</a>
+      </div>
     </div>
 
     <div class="state-entry" id="minnesota">
       <h3>Minnesota</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Minnesota Native Plant Society</span>
         <a href="https://www.mnnps.org" target="_blank" rel="noopener" class="org-link">mnnps.org</a>
-      </div><ul class="org-notes"><li>WildOnes MN chapter also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/minnesota/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/minnesota</a>
+      </div>
     </div>
 
     <div class="state-entry" id="mississippi">
       <h3>Mississippi</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Mississippi Native Plant Society</span>
         <a href="https://www.mississippinativeplantsociety.org" target="_blank" rel="noopener" class="org-link">mississippinativeplantsociety.org</a>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/mississippi/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/mississippi</a>
       </div>
     </div>
 
     <div class="state-entry" id="missouri">
       <h3>Missouri</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Missouri Native Plant Society</span>
         <a href="https://monativeplants.org" target="_blank" rel="noopener" class="org-link">monativeplants.org</a>
-      </div><ul class="org-notes"><li>WildOnes MO chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/missouri/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/missouri</a>
+      </div>
     </div>
 
     <div class="state-entry" id="montana">
       <h3>Montana</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Montana Native Plant Society</span>
         <a href="https://www.mtnativeplants.org" target="_blank" rel="noopener" class="org-link">mtnativeplants.org</a>
       </div>
@@ -884,15 +978,19 @@
 
     <div class="state-entry" id="nebraska">
       <h3>Nebraska</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Nebraska Native Plant Society</span>
         <a href="https://nebraskanativeplantsociety.weebly.com" target="_blank" rel="noopener" class="org-link">nebraskanativeplantsociety.weebly.com</a>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/nebraska/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/nebraska</a>
       </div>
     </div>
 
     <div class="state-entry" id="nevada">
       <h3>Nevada</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Nevada Native Plant Society</span>
         <a href="https://www.nvnps.org" target="_blank" rel="noopener" class="org-link">nvnps.org</a>
       </div>
@@ -900,7 +998,7 @@
 
     <div class="state-entry" id="new-hampshire">
       <h3>New Hampshire</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Native Plant Trust</span>
         <a href="https://www.nativeplanttrust.org" target="_blank" rel="noopener" class="org-link">nativeplanttrust.org</a>
       </div><ul class="org-notes"><li>New Hampshire is served by this Massachusetts-based regional org</li></ul>
@@ -908,15 +1006,19 @@
 
     <div class="state-entry" id="new-jersey">
       <h3>New Jersey</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">The Native Plant Society of New Jersey</span>
         <a href="https://www.npsnj.org" target="_blank" rel="noopener" class="org-link">npsnj.org</a>
-      </div><ul class="org-notes"><li>WildOnes NJ chapters also active; also see Jersey Friendly Yards (jerseyyards.org)</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/new-jersey/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/new-jersey</a>
+      </div><ul class="org-notes"><li>Also see Jersey Friendly Yards (jerseyyards.org)</li></ul>
     </div>
 
     <div class="state-entry" id="new-mexico">
       <h3>New Mexico</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Native Plant Society of New Mexico</span>
         <a href="https://npsnm.unm.edu" target="_blank" rel="noopener" class="org-link">npsnm.unm.edu</a>
       </div>
@@ -924,23 +1026,31 @@
 
     <div class="state-entry" id="new-york">
       <h3>New York</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">New York Flora Association</span>
         <a href="https://www.nyflora.org" target="_blank" rel="noopener" class="org-link">nyflora.org</a>
-      </div><ul class="org-notes"><li>WildOnes NY chapters also active; local societies also exist (Finger Lakes, Staten Island, Canandaigua)</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/new-york/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/new-york</a>
+      </div><ul class="org-notes"><li>Local societies also exist (Finger Lakes, Staten Island, Canandaigua)</li></ul>
     </div>
 
     <div class="state-entry" id="north-carolina">
       <h3>North Carolina</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">North Carolina Native Plant Society</span>
         <a href="https://ncwildflower.org" target="_blank" rel="noopener" class="org-link">ncwildflower.org</a>
-      </div><ul class="org-notes"><li>Has regional chapters; WildOnes NC chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/north-carolina/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/north-carolina</a>
+      </div><ul class="org-notes"><li>Has its own regional chapters statewide</li></ul>
     </div>
 
     <div class="state-entry" id="north-dakota">
       <h3>North Dakota</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Wild Ones — Lake Agassiz Region</span>
         <a href="https://lakeagassizregion.wildones.org" target="_blank" rel="noopener" class="org-link">lakeagassizregion.wildones.org</a>
       </div><ul class="org-notes"><li>No dedicated statewide North Dakota native plant society was identified; this is the active Wild Ones chapter serving the state</li></ul>
@@ -948,15 +1058,19 @@
 
     <div class="state-entry" id="ohio">
       <h3>Ohio</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">The Native Plant Society of Northeastern Ohio</span>
         <a href="https://nativeplantsocietyneo.org" target="_blank" rel="noopener" class="org-link">nativeplantsocietyneo.org</a>
-      </div><ul class="org-notes"><li>WildOnes OH chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/ohio/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/ohio</a>
+      </div>
     </div>
 
     <div class="state-entry" id="oklahoma">
       <h3>Oklahoma</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Oklahoma Native Plant Society</span>
         <a href="https://oknativeplants.org" target="_blank" rel="noopener" class="org-link">oknativeplants.org</a>
       </div>
@@ -964,7 +1078,7 @@
 
     <div class="state-entry" id="oregon">
       <h3>Oregon</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Native Plant Society of Oregon</span>
         <a href="https://npsoregon.org" target="_blank" rel="noopener" class="org-link">npsoregon.org</a>
       </div><ul class="org-notes"><li>Regional chapters incl. Portland (portlandnativeplants.org)</li></ul>
@@ -972,103 +1086,147 @@
 
     <div class="state-entry" id="pennsylvania">
       <h3>Pennsylvania</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Pennsylvania Native Plant Society</span>
         <a href="https://panativeplantsociety.org" target="_blank" rel="noopener" class="org-link">panativeplantsociety.org</a>
-      </div><ul class="org-notes"><li>WildOnes PA chapters also active; regional: Botanical Society of Western Pennsylvania (botsocwpa.org), Delaware Valley Fern &amp; Wildflower Society (dvfws.org)</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/pennsylvania/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/pennsylvania</a>
+      </div><ul class="org-notes"><li>Regional: Botanical Society of Western Pennsylvania (botsocwpa.org), Delaware Valley Fern &amp; Wildflower Society (dvfws.org)</li></ul>
     </div>
 
     <div class="state-entry" id="rhode-island">
       <h3>Rhode Island</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Rhode Island Wild Plant Society</span>
         <a href="https://riwps.org" target="_blank" rel="noopener" class="org-link">riwps.org</a>
-      </div><ul class="org-notes"><li>WildOnes RI chapter also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/rhode-island/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/rhode-island</a>
+      </div>
     </div>
 
     <div class="state-entry" id="south-carolina">
       <h3>South Carolina</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">South Carolina Native Plant Society</span>
         <a href="https://www.scnps.org" target="_blank" rel="noopener" class="org-link">scnps.org</a>
-      </div><ul class="org-notes"><li>WildOnes SC chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/south-carolina/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/south-carolina</a>
+      </div>
     </div>
 
     <div class="state-entry" id="south-dakota">
       <h3>South Dakota</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Great Plains Native Plant Society</span>
         <a href="https://gpnps.org" target="_blank" rel="noopener" class="org-link">gpnps.org</a>
-      </div><ul class="org-notes"><li>WildOnes SD chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/south-dakota/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/south-dakota</a>
+      </div>
     </div>
 
     <div class="state-entry" id="tennessee">
       <h3>Tennessee</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Tennessee Native Plant Society</span>
         <a href="https://www.tnps.org" target="_blank" rel="noopener" class="org-link">tnps.org</a>
-      </div><ul class="org-notes"><li>WildOnes TN chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/tennessee/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/tennessee</a>
+      </div>
     </div>
 
     <div class="state-entry" id="texas">
       <h3>Texas</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Native Plant Society of Texas</span>
         <a href="https://npsot.org" target="_blank" rel="noopener" class="org-link">npsot.org</a>
-      </div><ul class="org-notes"><li>Regional chapters statewide; WildOnes TX chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/texas/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/texas</a>
+      </div><ul class="org-notes"><li>Regional NPSOT chapters statewide</li></ul>
     </div>
 
     <div class="state-entry" id="utah">
       <h3>Utah</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Utah Native Plant Society</span>
         <a href="https://www.unps.org" target="_blank" rel="noopener" class="org-link">unps.org</a>
-      </div><ul class="org-notes"><li>WildOnes UT chapters also active</li></ul>
+      </div>
     </div>
 
     <div class="state-entry" id="vermont">
       <h3>Vermont</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Native Plant Trust</span>
         <a href="https://www.nativeplanttrust.org" target="_blank" rel="noopener" class="org-link">nativeplanttrust.org</a>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/vermont/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/vermont</a>
       </div><ul class="org-notes"><li>Vermont is served by this Massachusetts-based regional org</li></ul>
     </div>
 
     <div class="state-entry" id="virginia">
       <h3>Virginia</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Virginia Native Plant Society</span>
         <a href="https://vnps.org" target="_blank" rel="noopener" class="org-link">vnps.org</a>
-      </div><ul class="org-notes"><li>WildOnes VA chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/virginia/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/virginia</a>
+      </div>
     </div>
 
     <div class="state-entry" id="washington">
       <h3>Washington</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Washington Native Plant Society</span>
         <a href="https://www.wnps.org" target="_blank" rel="noopener" class="org-link">wnps.org</a>
-      </div><ul class="org-notes"><li>WildOnes WA chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/washington/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/washington</a>
+      </div>
     </div>
 
     <div class="state-entry" id="west-virginia">
       <h3>West Virginia</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">West Virginia Native Plant Society</span>
         <a href="https://wvnps.org" target="_blank" rel="noopener" class="org-link">wvnps.org</a>
-      </div><ul class="org-notes"><li>WildOnes WV chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/west-virginia/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/west-virginia</a>
+      </div>
     </div>
 
     <div class="state-entry" id="wisconsin">
       <h3>Wisconsin</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Botanical Club of Wisconsin</span>
         <a href="https://sites.google.com/site/botanicalclubofwisconsin" target="_blank" rel="noopener" class="org-link">sites.google.com/site/botanicalclubofwisconsin</a>
-      </div><ul class="org-notes"><li>WildOnes WI chapters also active</li></ul>
+      </div>
+      <div class="org-block">
+        <span class="org-name">Wild Ones</span>
+        <a href="https://wildones.org/chapters/wisconsin/" target="_blank" rel="noopener" class="org-link">wildones.org/chapters/wisconsin</a>
+      </div>
     </div>
 
     <div class="state-entry" id="wyoming">
       <h3>Wyoming</h3>
-      <div class="org-primary">
+      <div class="org-block">
         <span class="org-name">Wyoming Native Plant Society</span>
         <a href="https://wynps.org" target="_blank" rel="noopener" class="org-link">wynps.org</a>
       </div>
