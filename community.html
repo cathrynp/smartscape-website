@@ -195,6 +195,79 @@
     }
   }
 
+  /* KICKER */
+  .kicker-wrap {
+    padding: 36px 0 0;
+  }
+
+  .kicker {
+    font-family: 'Inter', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(30, 75, 61, 0.08);
+    color: var(--green);
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 999px;
+  }
+
+  .kicker::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background: var(--orange);
+    flex: 0 0 auto;
+  }
+
+  /* DIRECTORY CALLOUT */
+  .directory-callout {
+    background: linear-gradient(135deg, rgba(91, 58, 115, 0.06), rgba(58, 173, 160, 0.08));
+    border-radius: 20px;
+    padding: 32px 36px;
+    max-width: 760px;
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .directory-callout .dc-text h2 {
+    font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .directory-callout .dc-text h2::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background: var(--orange);
+    flex: 0 0 auto;
+  }
+
+  .directory-callout .dc-text p {
+    color: var(--charcoal-soft);
+    font-size: 1.02rem;
+    max-width: 480px;
+  }
+
+  .directory-callout .btn-primary {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
   /* PAGE HEADER */
   .c-hero {
     padding: 70px 0 50px;
@@ -403,6 +476,19 @@
     </div>
   </div>
 </nav>
+
+<section class="kicker-wrap">
+  <div class="wrap">
+    <span class="kicker">Find Local Native Plant Communities</span>
+    <div class="directory-callout">
+      <div class="dc-text">
+        <h2>Help Track Climate Change From Your Yard</h2>
+        <p>Connect with the native plant society in your state &mdash; expert guidance, local plant sales, and a community that's already doing this work near you.</p>
+      </div>
+      <a href="native-plant-societies.html" class="btn-primary">Browse the Directory &rarr;</a>
+    </div>
+  </div>
+</section>
 
 <section class="c-hero">
   <div class="wrap">
